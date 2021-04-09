@@ -10,5 +10,8 @@
   <%= @post.body %>
 </p>
 
+<%= image_tag @post.front_id_image.variant(resize_to_limit: [100, 100]) %>
+<%= image_tag @post.back_id_image.variant(resize_to_limit: [100, 100]) %>
+
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
